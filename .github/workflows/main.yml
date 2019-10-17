@@ -1,0 +1,15 @@
+name: CI-test
+
+on: [pull_request]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: c6h4clch3/textlint-ghaction
+      with:
+        use_reviewdog: "true"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
