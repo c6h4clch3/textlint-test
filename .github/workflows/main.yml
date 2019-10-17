@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - uses: c6h4clch3/textlint-ghaction
+    - uses: c6h4clch3/textlint-ghaction@master
       with:
         use_reviewdog: "true"
         github_token: ${{ secrets.GITHUB_TOKEN }}
